@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Apply to IBSC – Yuan Ze University</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Open Sans', Arial, sans-serif;
+      background-color: #eef1f6;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    header {
+      text-align: center;
+      background: linear-gradient(135deg, #002b6d, #0055b3);
+      color: white;
+      padding: 2.5em 1em;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.3);
+    }
+
+    .logo-container {
+      display: flex; justify-content: center; align-items: center;
+      gap: 40px; margin-bottom: 15px; flex-wrap: wrap;
+    }
+
+    header img {
+      width: 140px; height: auto; border-radius: 10px; background: white;
+      padding: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); transition: transform 0.3s;
+    }
+    header img:hover { transform: scale(1.08); }
+
+    h1 { font-size: 28px; font-weight: 700; margin-bottom: 0.4em; }
+    p.tagline { font-size: 15px; opacity: 0.95; }
+
+    .container {
+      max-width: 920px; margin: 2.5em auto; background: white; padding: 2.5em;
+      border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    }
+
+    h2 {
+      color: #003366; border-left: 6px solid #0055b3; padding-left: 12px;
+      margin-top: 1.5em; margin-bottom: 0.7em; font-size: 22px;
+    }
+
+    ul { list-style: none; padding-left: 0; }
+
+    li {
+      background: #f5f8ff; margin: 8px 0; padding: 10px 14px; border-radius: 8px;
+      display: flex; align-items: flex-start; gap: 8px; transition: all 0.3s ease;
+      border: 1px solid #e1e7f0;
+    }
+    li:hover { background: #e9f0ff; transform: translateX(3px); }
+
+    input[type="checkbox"] {
+      accent-color: #0055b3; width: 18px; height: 18px; margin-top: 2px; cursor: pointer;
+    }
+
+    .sub-list {
+      list-style: none;
+      margin-left: 35px;
+      margin-top: 8px;
+      padding-left: 10px;
+      border-left: 2px solid #cdd9f0;
+    }
+    .sub-list li {
+      background: #f8fbff;
+      margin: 4px 0;
+      padding: 6px 10px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      border: 1px solid #e0e6f2;
+    }
+    .sub-list li:hover { background: #eef5ff; transform: none; }
+
+    a { color: #0055b3; text-decoration: none; font-weight: 600; transition: color 0.2s ease; }
+    a:hover { color: #002b6d; text-decoration: underline; }
+
+    .extra-link {
+      background: #0055b3; color: #fff; padding: 3px 8px; border-radius: 6px;
+      font-size: 13px; margin-left: 8px; transition: background 0.3s;
+    }
+    .extra-link:hover { background: #003e8a; }
+
+    .faq, .contact {
+      background: #f3f7ff; padding: 1.2em; border-radius: 10px;
+      margin-top: 2em; border-left: 4px solid #0055b3;
+    }
+    .faq h3, .contact h3 { margin-bottom: 0.5em; color: #003366; }
+
+    .progress-container {
+      background: #d9d9d9; border-radius: 20px; height: 18px; margin: 25px 0; overflow: hidden;
+    }
+    .progress-bar {
+      background: linear-gradient(90deg, #0055b3, #00aaff);
+      height: 18px; border-radius: 20px; width: 0%; transition: width 0.4s ease;
+    }
+    .progress-text { font-weight: bold; text-align: right; color: #003366; }
+
+    footer {
+      text-align: center; padding: 1em; font-size: 14px; color: #555; background: #eef1f6;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="image/images1.png" alt="Yuan Ze University Logo 1" onerror="this.src='image/Images1.png'"/>
+      <img src="image/images2.avif" alt="Yuan Ze University Logo 2" onerror="this.src='image/Images2.png'"/>
+    </div>
+    <h1>How to Apply to IBSC — Yuan Ze University</h1>
+    <p class="tagline">For students from Vietnam 🇻🇳 | Clear Steps to Join the International Bachelor Program in Strategic Communication (IBSC)</p>
+  </header>
+
+  <div class="container">
+    <h2>Phase 1 – Before You Apply (Planning)</h2>
+    <ul>
+      <li><input type="checkbox" class="main-item" /> Research your program: <a href="https://ih.hs.yzu.edu.tw/" target="_blank">IBSC at Yuan Ze University</a></li>
+      <li><input type="checkbox" class="main-item" /> Check entry requirements (grades, English test scores)</li>
+      <li><input type="checkbox" class="main-item" /> Decide: Do you meet the requirements? If not, prepare for tests or explore other programs</li>
+    </ul>
+
+    <h2>Phase 2 – The Application (Action)</h2>
+    <ul>
+      <li><input type="checkbox" class="main-item" /> Create your account at: <a href="https://yzu-apply.yzu.edu.tw" target="_blank">Yuan Ze Application Portal</a></li>
+      <li><input type="checkbox" class="main-item" /> Fill out the online form completely</li>
+
+      <li id="upload-section">
+        <input type="checkbox" id="uploadAll" class="main-item" /> Upload all required documents:
+        <a href="https://yzu-apply.yzu.edu.tw/en_US/contents/content/5-required-document" target="_blank" class="extra-link">More Detail</a>
+
+        <ul class="sub-list">
+          <li><input type="checkbox" class="sub-item" /> High school diploma</li>
+          <li><input type="checkbox" class="sub-item" /> Official transcripts</li>
+          <li><input type="checkbox" class="sub-item" /> Passport copy</li>
+          <li><input type="checkbox" class="sub-item" /> Proof of English proficiency (IELTS / TOEFL / CEFR)</li>
+          <li><input type="checkbox" class="sub-item" /> Personal statement</li>
+          <li><input type="checkbox" class="sub-item" /> Financial statement (for international applicants)</li>
+        </ul>
+      </li>
+
+      <li>
+        <input type="checkbox" class="main-item" /> Pay the application fee
+        <a href="https://portalfun.yzu.edu.tw/tuiRegistryWeb/login.html" target="_blank" class="extra-link">Check It Out</a>
+      </li>
+      <li><input type="checkbox" class="main-item" /> Submit before deadline (Verify dates on <a href="https://www.yzu.edu.tw" target="_blank">Yuan Ze Portal</a>)</li>
+    </ul>
+
+    <h2>Phase 3 – After You Apply (Next Steps)</h2>
+    <ul>
+      <li><input type="checkbox" class="main-item" /> Check your application result through email</li>
+      <li>
+        <input type="checkbox" class="main-item" /> If accepted → Accept offer → 
+        <a href="https://www.yzu.edu.tw/admin/aa/files/Registration/freshman/fresh/%E8%B3%87%E6%9C%8D%E8%99%95%E6%9C%8D%E5%8B%99%E4%BB%8B%E7%B4%B9.pdf" target="_blank" class="extra-link">Register classes</a> 
+        → Apply for visa (if needed)
+      </li>
+      <li>
+        <input type="checkbox" class="main-item" /> If rejected → Contact admissions or 
+        <a href="https://www.yzu.edu.tw/index.php/en-us/academics" target="_blank" class="extra-link">explore other programs</a>
+      </li>
+    </ul>
+
+    <div class="faq">
+      <h3>Contacts</h3>
+      <p>📄 Upload all transcripts in the online system.</p>
+      <p>📧 Contact: <a href="mailto:ia@saturn.yzu.edu.tw">ia@saturn.yzu.edu.tw</a> | ☎ +886-3-4638800 ext. 2255</p>
+    </div>
+
+    <div class="contact">
+      <h3>Important Reminder</h3>
+      <p>🔗 Always verify dates, fees, and document requirements on the official Yuan Ze University portals.</p>
+    </div>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <p class="progress-text"><span id="progressText">0%</span> completed</p>
+  </div>
+
+  <footer>
+    © 2025 Yuan Ze University | International Bachelor Program in Smart Computing (IBSC)
+  </footer>
+
+  <script>
+    const mainItems = document.querySelectorAll('.main-item');
+    const subItems = document.querySelectorAll('.sub-item');
+    const uploadAll = document.getElementById('uploadAll');
+    const progressBar = document.getElementById('progressBar');
+    const progressText = document.getElementById('progressText');
+
+    function updateProgress() {
+      const allBoxes = [...mainItems, ...subItems];
+      const checkedBoxes = allBoxes.filter(cb => cb.checked);
+      const percent = Math.round((checkedBoxes.length / allBoxes.length) * 100);
+      progressBar.style.width = percent + '%';
+      progressText.textContent = percent + '%';
+    }
+
+    // Khi tick "Upload all" → tick tất cả sub-items
+    uploadAll.addEventListener('change', () => {
+      subItems.forEach(cb => cb.checked = uploadAll.checked);
+      updateProgress();
+    });
+
+    // Khi tick hết sub-items → tick uploadAll
+    subItems.forEach(cb => {
+      cb.addEventListener('change', () => {
+        const allChecked = [...subItems].every(i => i.checked);
+        uploadAll.checked = allChecked;
+        updateProgress();
+      });
+    });
+
+    // Khi tick các mục chính khác
+    mainItems.forEach(cb => cb.addEventListener('change', updateProgress));
+
+    updateProgress();
+  </script>
+</body>
+</html>
