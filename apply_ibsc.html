@@ -20,7 +20,24 @@
       color: white;
       padding: 2.5em 1em;
       box-shadow: 0 3px 15px rgba(0,0,0,0.3);
+      position: relative;
     }
+
+    /* Nút chuyển ngôn ngữ */
+    .lang-toggle {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      background: white;
+      color: #0055b3;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .lang-toggle:hover { background: #0055b3; color: white; }
 
     .logo-container {
       display: flex; justify-content: center; align-items: center;
@@ -37,30 +54,58 @@
     p.tagline { font-size: 15px; opacity: 0.95; }
 
     .container {
-      max-width: 920px; margin: 2.5em auto; background: white; padding: 2.5em;
-      border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      max-width: 960px;
+      margin: 2.5em auto;
+      padding: 1.5em;
     }
 
+    .phase-box {
+      background: white;
+      border-radius: 15px;
+      padding: 2em;
+      margin-bottom: 2em;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+      border-left: 8px solid #0055b3;
+      transition: transform 0.2s ease;
+    }
+
+    .phase-box:hover { transform: translateY(-3px); }
+
+    .phase-box.phase1 { border-left-color: #0055b3; background: #f6f9ff; }
+    .phase-box.phase2 { border-left-color: #00aaff; background: #f7fcff; }
+    .phase-box.phase3 { border-left-color: #008080; background: #f7fff9; }
+
     h2 {
-      color: #003366; border-left: 6px solid #0055b3; padding-left: 12px;
-      margin-top: 1.5em; margin-bottom: 0.7em; font-size: 22px;
+      color: #003366; 
+      font-size: 22px; 
+      margin-bottom: 0.7em;
     }
 
     ul { list-style: none; padding-left: 0; }
 
     li {
-      background: #f5f8ff; margin: 8px 0; padding: 10px 14px; border-radius: 8px;
-      display: flex; align-items: flex-start; gap: 8px; transition: all 0.3s ease;
+      background: #ffffffd9;
+      margin: 8px 0;
+      padding: 10px 14px;
+      border-radius: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
       border: 1px solid #e1e7f0;
+      transition: background 0.3s, transform 0.3s;
     }
-    li:hover { background: #e9f0ff; transform: translateX(3px); }
+
+    li:hover { background: #eaf3ff; transform: translateX(3px); }
 
     input[type="checkbox"] {
-      accent-color: #0055b3; width: 18px; height: 18px; margin-top: 2px; cursor: pointer;
+      accent-color: #0055b3;
+      width: 18px;
+      height: 18px;
+      margin-top: 3px;
+      cursor: pointer;
     }
 
     .sub-list {
-      list-style: none;
       margin-left: 35px;
       margin-top: 8px;
       padding-left: 10px;
@@ -77,9 +122,8 @@
       font-size: 15px;
       border: 1px solid #e0e6f2;
     }
-    .sub-list li:hover { background: #eef5ff; transform: none; }
 
-    a { color: #0055b3; text-decoration: none; font-weight: 600; transition: color 0.2s ease; }
+    a { color: #0055b3; text-decoration: none; font-weight: 600; }
     a:hover { color: #002b6d; text-decoration: underline; }
 
     .extra-link {
@@ -89,93 +133,116 @@
     .extra-link:hover { background: #003e8a; }
 
     .faq, .contact {
-      background: #f3f7ff; padding: 1.2em; border-radius: 10px;
-      margin-top: 2em; border-left: 4px solid #0055b3;
+      background: #f3f7ff;
+      padding: 1.2em;
+      border-radius: 10px;
+      margin-top: 2em;
+      border-left: 4px solid #0055b3;
     }
-    .faq h3, .contact h3 { margin-bottom: 0.5em; color: #003366; }
+
+    .faq h3, .contact h3 {
+      margin-bottom: 0.5em;
+      color: #003366;
+    }
 
     .progress-container {
-      background: #d9d9d9; border-radius: 20px; height: 18px; margin: 25px 0; overflow: hidden;
+      background: #d9d9d9;
+      border-radius: 20px;
+      height: 18px;
+      margin: 30px 0 10px;
+      overflow: hidden;
     }
+
     .progress-bar {
       background: linear-gradient(90deg, #0055b3, #00aaff);
-      height: 18px; border-radius: 20px; width: 0%; transition: width 0.4s ease;
+      height: 18px;
+      border-radius: 20px;
+      width: 0%;
+      transition: width 0.4s ease;
     }
-    .progress-text { font-weight: bold; text-align: right; color: #003366; }
+
+    .progress-text {
+      font-weight: bold;
+      text-align: right;
+      color: #003366;
+      margin-bottom: 25px;
+    }
 
     footer {
-      text-align: center; padding: 1em; font-size: 14px; color: #555; background: #eef1f6;
+      text-align: center;
+      padding: 1em;
+      font-size: 14px;
+      color: #555;
+      background: #eef1f6;
     }
   </style>
 </head>
 
 <body>
   <header>
+    <button class="lang-toggle" id="langToggle">🇻🇳 Tiếng Việt</button>
     <div class="logo-container">
-      <img src="image/images1.png" alt="Yuan Ze University Logo 1" onerror="this.src='image/Images1.png'"/>
-      <img src="image/images2.avif" alt="Yuan Ze University Logo 2" onerror="this.src='image/Images2.png'"/>
+      <img src="image/images1.png" alt="Yuan Ze University Logo 1" />
+      <img src="image/images2.avif" alt="Yuan Ze University Logo 2" />
     </div>
-    <h1>How to Apply to IBSC — Yuan Ze University</h1>
-    <p class="tagline">For students from Vietnam 🇻🇳 | Clear Steps to Join the International Bachelor Program in Strategic Communication (IBSC)</p>
+    <h1 id="mainTitle">How to Apply to IBSC — Yuan Ze University</h1>
+    <p class="tagline" id="tagline">For students from Vietnam 🇻🇳 | Step-by-step guide to join the International Bachelor Program in Strategic Communication</p>
   </header>
 
-  <div class="container">
-    <h2>Phase 1 – Before You Apply (Planning)</h2>
-    <ul>
-      <li><input type="checkbox" class="main-item" /> Research your program: <a href="https://ih.hs.yzu.edu.tw/" target="_blank">IBSC at Yuan Ze University</a></li>
-      <li><input type="checkbox" class="main-item" /> Check entry requirements (grades, English test scores)</li>
-      <li><input type="checkbox" class="main-item" /> Decide: Do you meet the requirements? If not, prepare for tests or explore other programs</li>
-    </ul>
+  <div class="container" id="content">
+    <!-- Nội dung (giữ nguyên) -->
+    <!-- PHASE 1 -->
+    <section class="phase-box phase1">
+      <h2 data-key="phase1_title">Phase 1 – Before You Apply (Planning)</h2>
+      <ul>
+        <li><input type="checkbox" class="main-item" /> <span data-key="research">Research your program:</span> <a href="https://ih.hs.yzu.edu.tw/" target="_blank">IBSC at Yuan Ze University</a></li>
+        <li><input type="checkbox" class="main-item" /> <span data-key="check_req">Check entry requirements (grades, English test scores)</span></li>
+        <li><input type="checkbox" class="main-item" /> <span data-key="decide">Decide: Do you meet the requirements? If not, prepare for tests or explore other programs</span></li>
+      </ul>
+    </section>
 
-    <h2>Phase 2 – The Application (Action)</h2>
-    <ul>
-      <li><input type="checkbox" class="main-item" /> Create your account at: <a href="https://yzu-apply.yzu.edu.tw" target="_blank">Yuan Ze Application Portal</a></li>
-      <li><input type="checkbox" class="main-item" /> Fill out the online form completely</li>
+    <!-- PHASE 2 -->
+    <section class="phase-box phase2">
+      <h2 data-key="phase2_title">Phase 2 – The Application (Action)</h2>
+      <ul>
+        <li><input type="checkbox" class="main-item" /> <span data-key="create_account">Create your account at</span> <a href="https://yzu-apply.yzu.edu.tw" target="_blank">Yuan Ze Application Portal</a></li>
+        <li><input type="checkbox" class="main-item" /> <span data-key="fill_form">Fill out the online form completely</span></li>
+        <li id="upload-section">
+          <input type="checkbox" id="uploadAll" class="main-item" /> <span data-key="upload_docs">Upload all required documents:</span>
+          <a href="https://yzu-apply.yzu.edu.tw/en_US/contents/content/5-required-document" target="_blank" class="extra-link" data-key="details">More Details</a>
+          <ul class="sub-list">
+            <li><input type="checkbox" class="sub-item" /> <span data-key="doc1">High school diploma</span></li>
+            <li><input type="checkbox" class="sub-item" /> <span data-key="doc2">Official transcripts</span></li>
+            <li><input type="checkbox" class="sub-item" /> <span data-key="doc3">Passport copy</span></li>
+            <li><input type="checkbox" class="sub-item" /> <span data-key="doc4">Proof of English proficiency (IELTS / TOEFL / CEFR)</span></li>
+            <li><input type="checkbox" class="sub-item" /> <span data-key="doc5">Personal statement</span></li>
+            <li><input type="checkbox" class="sub-item" /> <span data-key="doc6">Financial statement (for international applicants)</span></li>
+          </ul>
+        </li>
+        <li><input type="checkbox" class="main-item" /> <span data-key="pay_fee">Pay the application fee</span> <a href="https://portalfun.yzu.edu.tw/tuiRegistryWeb/login.html" target="_blank" class="extra-link">Check Here</a></li>
+        <li><input type="checkbox" class="main-item" /> <span data-key="submit">Submit before deadline (check Yuan Ze Portal for updates)</span></li>
+      </ul>
+    </section>
 
-      <li id="upload-section">
-        <input type="checkbox" id="uploadAll" class="main-item" /> Upload all required documents:
-        <a href="https://yzu-apply.yzu.edu.tw/en_US/contents/content/5-required-document" target="_blank" class="extra-link">More Detail</a>
-
-        <ul class="sub-list">
-          <li><input type="checkbox" class="sub-item" /> High school diploma</li>
-          <li><input type="checkbox" class="sub-item" /> Official transcripts</li>
-          <li><input type="checkbox" class="sub-item" /> Passport copy</li>
-          <li><input type="checkbox" class="sub-item" /> Proof of English proficiency (IELTS / TOEFL / CEFR)</li>
-          <li><input type="checkbox" class="sub-item" /> Personal statement</li>
-          <li><input type="checkbox" class="sub-item" /> Financial statement (for international applicants)</li>
-        </ul>
-      </li>
-
-      <li>
-        <input type="checkbox" class="main-item" /> Pay the application fee
-        <a href="https://portalfun.yzu.edu.tw/tuiRegistryWeb/login.html" target="_blank" class="extra-link">Check It Out</a>
-      </li>
-      <li><input type="checkbox" class="main-item" /> Submit before deadline (Verify dates on <a href="https://www.yzu.edu.tw" target="_blank">Yuan Ze Portal</a>)</li>
-    </ul>
-
-    <h2>Phase 3 – After You Apply (Next Steps)</h2>
-    <ul>
-      <li><input type="checkbox" class="main-item" /> Check your application result through email</li>
-      <li>
-        <input type="checkbox" class="main-item" /> If accepted → Accept offer → 
-        <a href="https://www.yzu.edu.tw/admin/aa/files/Registration/freshman/fresh/%E8%B3%87%E6%9C%8D%E8%99%95%E6%9C%8D%E5%8B%99%E4%BB%8B%E7%B4%B9.pdf" target="_blank" class="extra-link">Register classes</a> 
-        → Apply for visa (if needed)
-      </li>
-      <li>
-        <input type="checkbox" class="main-item" /> If rejected → Contact admissions or 
-        <a href="https://www.yzu.edu.tw/index.php/en-us/academics" target="_blank" class="extra-link">explore other programs</a>
-      </li>
-    </ul>
+    <!-- PHASE 3 -->
+    <section class="phase-box phase3">
+      <h2 data-key="phase3_title">Phase 3 – After You Apply (Next Steps)</h2>
+      <ul>
+        <li><input type="checkbox" class="main-item" /> <span data-key="check_result">Check your application result through email</span></li>
+        <li><input type="checkbox" class="main-item" /> <span data-key="accepted">If accepted → Accept offer → Register classes → Apply for visa (if needed)</span></li>
+        <li><input type="checkbox" class="main-item" /> <span data-key="rejected">If rejected → Contact admissions or explore other programs</span></li>
+      </ul>
+    </section>
 
     <div class="faq">
-      <h3>Contacts</h3>
-      <p>📄 Upload all transcripts in the online system.</p>
-      <p>📧 Contact: <a href="mailto:ia@saturn.yzu.edu.tw">ia@saturn.yzu.edu.tw</a> | ☎ +886-3-4638800 ext. 2255</p>
+      <h3 data-key="contact_title">Contacts</h3>
+      <p data-key="upload_tip">📄 Upload all transcripts in the online system.</p>
+      <p>📧 <span data-key="contact_info">Contact: ia@saturn.yzu.edu.tw | ☎ +886-3-4638800 ext. 2255</span></p>
     </div>
 
     <div class="contact">
-      <h3>Important Reminder</h3>
-      <p>🔗 Always verify dates, fees, and document requirements on the official Yuan Ze University portals.</p>
+      <h3 data-key="reminder_title">Important Reminder</h3>
+      <p data-key="reminder_text">🔗 Always verify dates, fees, and document requirements on the official Yuan Ze University portals.</p>
     </div>
 
     <div class="progress-container">
@@ -189,6 +256,7 @@
   </footer>
 
   <script>
+    // === PROGRESS BAR ===
     const mainItems = document.querySelectorAll('.main-item');
     const subItems = document.querySelectorAll('.sub-item');
     const uploadAll = document.getElementById('uploadAll');
@@ -203,13 +271,11 @@
       progressText.textContent = percent + '%';
     }
 
-    // Khi tick "Upload all" → tick tất cả sub-items
     uploadAll.addEventListener('change', () => {
       subItems.forEach(cb => cb.checked = uploadAll.checked);
       updateProgress();
     });
 
-    // Khi tick hết sub-items → tick uploadAll
     subItems.forEach(cb => {
       cb.addEventListener('change', () => {
         const allChecked = [...subItems].every(i => i.checked);
@@ -218,10 +284,62 @@
       });
     });
 
-    // Khi tick các mục chính khác
     mainItems.forEach(cb => cb.addEventListener('change', updateProgress));
-
     updateProgress();
+
+    // === MULTILANGUAGE TOGGLE ===
+    const langToggle = document.getElementById('langToggle');
+    const translations = {
+      vi: {
+        mainTitle: "Hướng Dẫn Nộp Hồ Sơ – Chương Trình IBSC (Đại học Nguyên Trí)",
+        tagline: "Dành cho sinh viên Việt Nam 🇻🇳 | Hướng dẫn từng bước để tham gia chương trình Cử nhân Quốc tế về Truyền thông Chiến lược",
+        phase1_title: "Giai đoạn 1 – Trước khi đăng ký (Chuẩn bị)",
+        research: "Tìm hiểu chương trình của bạn:",
+        check_req: "Kiểm tra yêu cầu đầu vào (điểm số, chứng chỉ tiếng Anh)",
+        decide: "Quyết định: Bạn có đủ điều kiện không? Nếu không, hãy luyện thi hoặc xem các chương trình khác",
+        phase2_title: "Giai đoạn 2 – Nộp hồ sơ (Thực hiện)",
+        create_account: "Tạo tài khoản tại",
+        fill_form: "Điền đầy đủ biểu mẫu trực tuyến",
+        upload_docs: "Tải lên tất cả các tài liệu bắt buộc:",
+        details: "Xem chi tiết",
+        doc1: "Bằng tốt nghiệp THPT",
+        doc2: "Học bạ chính thức",
+        doc3: "Bản sao hộ chiếu",
+        doc4: "Chứng chỉ tiếng Anh (IELTS / TOEFL / CEFR)",
+        doc5: "Bài luận cá nhân",
+        doc6: "Giấy chứng minh tài chính (dành cho sinh viên quốc tế)",
+        pay_fee: "Thanh toán lệ phí đăng ký",
+        submit: "Nộp hồ sơ trước hạn (kiểm tra trên cổng YZU để cập nhật)",
+        phase3_title: "Giai đoạn 3 – Sau khi nộp (Các bước tiếp theo)",
+        check_result: "Kiểm tra kết quả hồ sơ qua email",
+        accepted: "Nếu được nhận → Xác nhận nhập học → Đăng ký lớp → Xin visa (nếu cần)",
+        rejected: "Nếu bị từ chối → Liên hệ phòng tuyển sinh hoặc xem các chương trình khác",
+        contact_title: "Liên hệ",
+        upload_tip: "📄 Tải lên học bạ của bạn trên hệ thống trực tuyến.",
+        contact_info: "Liên hệ: ia@saturn.yzu.edu.tw | ☎ +886-3-4638800 ext. 2255",
+        reminder_title: "Lưu ý quan trọng",
+        reminder_text: "🔗 Luôn xác minh ngày, phí và yêu cầu tài liệu trên trang chính thức của Đại học Nguyên Trí."
+      }
+    };
+
+    let currentLang = "en";
+    langToggle.addEventListener('click', () => {
+      const isVietnamese = currentLang === "en";
+      const dict = translations.vi;
+
+      document.querySelectorAll("[data-key]").forEach(el => {
+        const key = el.getAttribute("data-key");
+        if (dict[key]) el.textContent = dict[key];
+      });
+
+      document.getElementById("mainTitle").textContent = dict.mainTitle;
+      document.getElementById("tagline").textContent = dict.tagline;
+
+      langToggle.textContent = isVietnamese ? "🇬🇧 English" : "🇻🇳 Tiếng Việt";
+      currentLang = isVietnamese ? "vi" : "en";
+      if (!isVietnamese) location.reload(); // Reload to return English
+    });
   </script>
 </body>
 </html>
+ih.hs.yzu.edu.tw
