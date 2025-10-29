@@ -70,13 +70,13 @@
 
     .phase-box:hover { transform: translateY(-3px); }
 
-    .phase-box.phase1 { border-left-color: #0055b3; background: #f6f9ff; }
-    .phase-box.phase2 { border-left-color: #00aaff; background: #f7fcff; }
-    .phase-box.phase3 { border-left-color: #008080; background: #f7fff9; }
+    .phase1 { background: #f6f9ff; }
+    .phase2 { background: #f7fcff; }
+    .phase3 { background: #f7fff9; }
 
     h2 {
-      color: #003366; 
-      font-size: 22px; 
+      color: #003366;
+      font-size: 22px;
       margin-bottom: 0.7em;
     }
 
@@ -122,14 +122,8 @@
       border: 1px solid #e0e6f2;
     }
 
-    a { color: #0055b3; text-decoration: none; font-weight: 600; }
+    a { color: #0055b3; font-weight: 600; text-decoration: none; }
     a:hover { color: #002b6d; text-decoration: underline; }
-
-    .extra-link {
-      background: #0055b3; color: #fff; padding: 3px 8px; border-radius: 6px;
-      font-size: 13px; margin-left: 8px; transition: background 0.3s;
-    }
-    .extra-link:hover { background: #003e8a; }
 
     .faq, .contact {
       background: #f3f7ff;
@@ -137,11 +131,6 @@
       border-radius: 10px;
       margin-top: 2em;
       border-left: 4px solid #0055b3;
-    }
-
-    .faq h3, .contact h3 {
-      margin-bottom: 0.5em;
-      color: #003366;
     }
 
     .progress-container {
@@ -155,9 +144,9 @@
     .progress-bar {
       background: linear-gradient(90deg, #0055b3, #00aaff);
       height: 18px;
-      border-radius: 20px;
       width: 0%;
-      transition: width 0.4s ease;
+      border-radius: 20px;
+      transition: 0.4s;
     }
 
     .progress-text {
@@ -178,204 +167,224 @@
 </head>
 
 <body>
-  <header>
-    <button class="lang-toggle" id="langToggle">🇻🇳 Tiếng Việt</button>
-    <div class="logo-container">
-      <img src="image/images1.png" alt="Yuan Ze University Logo 1" />
-      <img src="image/images2.avif" alt="Yuan Ze University Logo 2" />
-    </div>
-    <h1 id="mainTitle">How to Apply to IBSC — Yuan Ze University</h1>
-    <p class="tagline" id="tagline">For students from Vietnam 🇻🇳 | Step-by-step guide to join the International Bachelor Program in Strategic Communication</p>
-  </header>
+<header>
+  <button class="lang-toggle" id="langToggle">🇻🇳 Tiếng Việt</button>
+  <div class="logo-container">
+    <img src="image/images1.png" alt="Yuan Ze University Logo 1" />
+    <img src="image/images2.avif" alt="Yuan Ze University Logo 2" />
+  </div>
+  <h1 id="mainTitle">How to Apply to IBSC — Yuan Ze University</h1>
+  <p class="tagline" id="tagline">For students from Vietnam 🇻🇳 | Step-by-step guide to join the International Bachelor Program in Strategic Communication</p>
+</header>
 
-  <div class="container" id="content">
+<div class="container" id="content">
 
-    <!-- PHASE 1 -->
-    <section class="phase-box phase1">
-      <h2 data-key="phase1_title">Phase 1 – Before You Apply (Planning)</h2>
-      <ul>
-        <li>
-          <input type="checkbox" class="main-item" /> 
-          <span data-key="research">Research your program: </span>
-          <a href="https://ih.hs.yzu.edu.tw/" target="_blank">IBSC at Yuan Ze University</a>
-        </li>
+  <!-- PHASE 1 -->
+  <section class="phase-box phase1">
+    <h2 data-key="phase1_title">Phase 1 – Before You Apply (Planning)</h2>
+    <ul>
+      <li>
+        <input type="checkbox" class="main-item"/>
+        <span data-key="research">Research your program: </span>
+        <a href="https://ih.hs.yzu.edu.tw/" target="_blank">IBSC at Yuan Ze University</a>
+      </li>
 
-        <li>
-          <input type="checkbox" class="main-item" /> 
-          <span data-key="check_req">Check entry requirements (grades, English test scores)</span>
-        </li>
+      <li>
+        <input type="checkbox" class="main-item"/>
+        <span data-key="check_req">Check entry requirements (grades, English test scores)</span>
+      </li>
 
-        <li>
-          <input type="checkbox" class="main-item" /> 
-          <span data-key="decide">
-            Decide: Do you meet the requirements? If not, prepare for tests or 
-            <a href="https://www.yzu.edu.tw/index.php/en-us/academics" target="_blank">explore other programs</a>
-          </span>
-        </li>
-      </ul>
-    </section>
+      <li>
+        <input type="checkbox" class="main-item"/>
+        <span data-key="decide">
+          Decide: Do you meet the requirements? If not, prepare for tests or 
+          <a href="https://www.yzu.edu.tw/index.php/en-us/academics" target="_blank">explore other programs</a>
+        </span>
+      </li>
+    </ul>
+  </section>
 
-    <!-- PHASE 2 -->
-    <section class="phase-box phase2">
-      <h2 data-key="phase2_title">Phase 2 – The Application (Action)</h2>
-      <ul>
-        <li><input type="checkbox" class="main-item" /> <span data-key="create_account">Create your account at</span> <a href="https://yzu-apply.yzu.edu.tw" target="_blank">Yuan Ze Application Portal</a></li>
-        <li><input type="checkbox" class="main-item" /> <span data-key="fill_form">Fill out the online form completely</span></li>
-        <li id="upload-section">
-          <input type="checkbox" id="uploadAll" class="main-item" /> 
-          <span data-key="upload_docs">Upload all required documents:</span>
-          <a href="https://yzu-apply.yzu.edu.tw/en_US/contents/content/5-required-document" target="_blank" class="extra-link">More Details</a>
+  <!-- PHASE 2 -->
+  <section class="phase-box phase2">
+    <h2 data-key="phase2_title">Phase 2 – The Application (Action)</h2>
+    <ul>
+      <li>
+        <input type="checkbox" class="main-item" />
+        <span data-key="create_account">
+          Create your account at 
+        </span>
+        <a href="https://yzu-apply.yzu.edu.tw" target="_blank">Yuan Ze Application Portal</a>
+      </li>
 
-          <ul class="sub-list">
-            <li><input type="checkbox" class="sub-item" /> <span data-key="doc1">High school diploma</span></li>
-            <li><input type="checkbox" class="sub-item" /> <span data-key="doc2">Official transcripts</span></li>
-            <li><input type="checkbox" class="sub-item" /> <span data-key="doc3">Passport copy</span></li>
-            <li><input type="checkbox" class="sub-item" /> <span data-key="doc4">Proof of English proficiency (IELTS / TOEFL / CEFR)</span></li>
-            <li><input type="checkbox" class="sub-item" /> <span data-key="doc5">Personal statement</span></li>
-            <li><input type="checkbox" class="sub-item" /> <span data-key="doc6">Financial statement (for international applicants)</span></li>
-          </ul>
-        </li>
+      <li>
+        <input type="checkbox" class="main-item" />
+        <span data-key="fill_form">Fill out the online form completely</span>
+      </li>
 
-        <li>
-          <input type="checkbox" class="main-item" /> 
-          <span data-key="pay_fee">Pay the application fee</span> 
-          <a href="https://portalfun.yzu.edu.tw/tuiRegistryWeb/login.html" target="_blank" class="extra-link">Check Here</a>
-        </li>
+      <li id="upload-section">
+        <input type="checkbox" id="uploadAll" class="main-item" />
+        <span data-key="upload_docs">
+          Upload all required documents 
+          (<a href="https://yzu-apply.yzu.edu.tw/en_US/contents/content/5-required-document" target="_blank">see full list here</a>):
+        </span>
 
-        <li>
-          <input type="checkbox" class="main-item" /> 
-          <span data-key="submit">Submit before deadline (check Yuan Ze Portal for updates)</span>
-          <a href="https://www.yzu.edu.tw/" target="_blank" class="extra-link">YZU Portal</a>
-        </li>
-      </ul>
-    </section>
+        <ul class="sub-list">
+          <li><input type="checkbox" class="sub-item" /> <span data-key="doc1">High school diploma</span></li>
+          <li><input type="checkbox" class="sub-item" /> <span data-key="doc2">Official transcripts</span></li>
+          <li><input type="checkbox" class="sub-item" /> <span data-key="doc3">Passport copy</span></li>
+          <li><input type="checkbox" class="sub-item" /> <span data-key="doc4">Proof of English proficiency (IELTS / TOEFL / CEFR)</span></li>
+          <li><input type="checkbox" class="sub-item" /> <span data-key="doc5">Personal statement</span></li>
+          <li><input type="checkbox" class="sub-item" /> <span data-key="doc6">Financial statement (for international applicants)</span></li>
+        </ul>
+      </li>
 
-    <!-- PHASE 3 -->
-    <section class="phase-box phase3">
-      <h2 data-key="phase3_title">Phase 3 – After You Apply (Next Steps)</h2>
-      <ul>
-        <li><input type="checkbox" class="main-item" /> <span data-key="check_result">Check your application result through email</span></li>
+      <li>
+        <input type="checkbox" class="main-item" />
+        <span data-key="pay_fee">
+          Pay the application fee at 
+          <a href="https://portalfun.yzu.edu.tw/tuiRegistryWeb/login.html" target="_blank">the YZU payment system</a>
+        </span>
+      </li>
 
-        <li>
-          <input type="checkbox" class="main-item" /> 
-          <span data-key="accepted">
-            If accepted → Accept offer → <a href="https://www.yzu.edu.tw/admin/aa/files/Registration/freshman/fresh/%E8%B3%87%E6%9C%8D%E8%99%95%E6%9C%8D%E5%8B%99%E4%BB%8B%E7%B4%B9.pdf" target="_blank">Register classes</a> → Apply for visa (if needed)
-          </span>
-        </li>
+      <li>
+        <input type="checkbox" class="main-item" />
+        <span data-key="submit">
+          Submit before deadline (check 
+          <a href="https://www.yzu.edu.tw/" target="_blank">Yuan Ze Portal</a> for updates)
+        </span>
+      </li>
+    </ul>
+  </section>
 
-        <li>
-          <input type="checkbox" class="main-item" /> 
-          <span data-key="rejected">
-            If rejected → Contact admissions or 
-            <a href="https://www.yzu.edu.tw/index.php/en-us/academics" target="_blank">explore other programs</a>
-          </span>
-        </li>
-      </ul>
-    </section>
+  <!-- PHASE 3 -->
+  <section class="phase-box phase3">
+    <h2 data-key="phase3_title">Phase 3 – After You Apply (Next Steps)</h2>
+    <ul>
+      <li><input type="checkbox" class="main-item" /> <span data-key="check_result">Check your application result through email</span></li>
 
-    <div class="faq">
-      <h3 data-key="contact_title">Contacts</h3>
-      <p data-key="upload_tip">📄 Upload all transcripts in the online system.</p>
-      <p>📧 <span data-key="contact_info">Contact: ia@saturn.yzu.edu.tw | ☎ +886-3-4638800 ext. 2255</span></p>
-    </div>
+      <li>
+        <input type="checkbox" class="main-item" /> 
+        <span data-key="accepted">
+          If accepted → Accept offer → 
+          <a href="https://www.yzu.edu.tw/admin/aa/files/Registration/freshman/fresh/%E8%B3%87%E6%9C%8D%E8%99%95%E6%9C%8D%E5%8B%99%E4%BB%8B%E7%B4%B9.pdf" target="_blank">Register classes</a> → Apply for visa (if needed)
+        </span>
+      </li>
 
-    <div class="contact">
-      <h3 data-key="reminder_title">Important Reminder</h3>
-      <p data-key="reminder_text">🔗 Always verify dates, fees, and document requirements on the official Yuan Ze University portals.</p>
-    </div>
+      <li>
+        <input type="checkbox" class="main-item" /> 
+        <span data-key="rejected">
+          If rejected → Contact admissions or 
+          <a href="https://www.yzu.edu.tw/index.php/en-us/academics" target="_blank">explore other programs</a>
+        </span>
+      </li>
+    </ul>
+  </section>
 
-    <div class="progress-container">
-      <div class="progress-bar" id="progressBar"></div>
-    </div>
-    <p class="progress-text"><span id="progressText">0%</span> completed</p>
+  <div class="faq">
+    <h3 data-key="contact_title">Contacts</h3>
+    <p data-key="upload_tip">📄 Upload all transcripts in the online system.</p>
+    <p>📧 <span data-key="contact_info">Contact: ia@saturn.yzu.edu.tw | ☎ +886-3-4638800 ext. 2255</span></p>
   </div>
 
-  <footer>
-    © 2025 Yuan Ze University | International Bachelor Program in Strategy Communication (IBSC)
-  </footer>
+  <div class="contact">
+    <h3 data-key="reminder_title">Important Reminder</h3>
+    <p data-key="reminder_text">🔗 Always verify dates, fees, and document requirements on the official Yuan Ze University portals.</p>
+  </div>
 
-  <script>
-    const mainItems = document.querySelectorAll('.main-item');
-    const subItems = document.querySelectorAll('.sub-item');
-    const uploadAll = document.getElementById('uploadAll');
-    const progressBar = document.getElementById('progressBar');
-    const progressText = document.getElementById('progressText');
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+  <p class="progress-text"><span id="progressText">0%</span> completed</p>
+</div>
 
-    function updateProgress() {
-      const allBoxes = [...mainItems, ...subItems];
-      const checkedBoxes = allBoxes.filter(cb => cb.checked);
-      const percent = Math.round((checkedBoxes.length / allBoxes.length) * 100);
-      progressBar.style.width = percent + '%';
-      progressText.textContent = percent + '%';
-    }
+<footer>
+  © 2025 Yuan Ze University | International Bachelor Program in Strategy Communication (IBSC)
+</footer>
 
-    uploadAll.addEventListener('change', () => {
-      subItems.forEach(cb => cb.checked = uploadAll.checked);
+<script>
+  const mainItems = document.querySelectorAll('.main-item');
+  const subItems = document.querySelectorAll('.sub-item');
+  const uploadAll = document.getElementById('uploadAll');
+  const progressBar = document.getElementById('progressBar');
+  const progressText = document.getElementById('progressText');
+
+  function updateProgress() {
+    const allBoxes = [...mainItems, ...subItems];
+    const checkedBoxes = allBoxes.filter(cb => cb.checked);
+    const percent = Math.round((checkedBoxes.length / allBoxes.length) * 100);
+    progressBar.style.width = percent + '%';
+    progressText.textContent = percent + '%';
+  }
+
+  uploadAll.addEventListener('change', () => {
+    subItems.forEach(cb => cb.checked = uploadAll.checked);
+    updateProgress();
+  });
+
+  subItems.forEach(cb => {
+    cb.addEventListener('change', () => {
+      const allChecked = [...subItems].every(i => i.checked);
+      uploadAll.checked = allChecked;
       updateProgress();
     });
+  });
 
-    subItems.forEach(cb => {
-      cb.addEventListener('change', () => {
-        const allChecked = [...subItems].every(i => i.checked);
-        uploadAll.checked = allChecked;
-        updateProgress();
-      });
+  mainItems.forEach(cb => cb.addEventListener('change', updateProgress));
+  updateProgress();
+
+  // MULTILANGUAGE
+  const langToggle = document.getElementById('langToggle');
+  const translations = {
+    vi: {
+      mainTitle: "Hướng Dẫn Nộp Hồ Sơ – Chương Trình IBSC (Đại học Nguyên Trí)",
+      tagline: "Dành cho sinh viên Việt Nam 🇻🇳 | Hướng dẫn từng bước để tham gia chương trình Cử nhân Quốc tế về Truyền thông Chiến lược",
+      phase1_title: "Giai đoạn 1 – Trước khi đăng ký (Chuẩn bị)",
+      research: "Tìm hiểu chương trình của bạn:",
+      check_req: "Kiểm tra yêu cầu đầu vào (điểm số, chứng chỉ tiếng Anh)",
+      decide: "Quyết định: Bạn có đủ điều kiện không? Nếu không, hãy luyện thi hoặc xem các chương trình khác",
+      phase2_title: "Giai đoạn 2 – Nộp hồ sơ (Thực hiện)",
+      create_account: "Tạo tài khoản tại",
+      fill_form: "Điền đầy đủ biểu mẫu trực tuyến",
+      upload_docs: "Tải lên tất cả các tài liệu bắt buộc:",
+      details: "Xem chi tiết",
+      doc1: "Bằng tốt nghiệp THPT",
+      doc2: "Học bạ chính thức",
+      doc3: "Bản sao hộ chiếu",
+      doc4: "Chứng chỉ tiếng Anh (IELTS / TOEFL / CEFR)",
+      doc5: "Bài luận cá nhân",
+      doc6: "Giấy chứng minh tài chính (dành cho sinh viên quốc tế)",
+      pay_fee: "Thanh toán lệ phí đăng ký",
+      submit: "Nộp hồ sơ trước hạn (kiểm tra trên cổng YZU để cập nhật)",
+      phase3_title: "Giai đoạn 3 – Sau khi nộp (Các bước tiếp theo)",
+      check_result: "Kiểm tra kết quả hồ sơ qua email",
+      accepted: "Nếu được nhận → Xác nhận nhập học → Đăng ký lớp → Xin visa (nếu cần)",
+      rejected: "Nếu bị từ chối → Liên hệ phòng tuyển sinh hoặc xem các chương trình khác",
+      contact_title: "Liên hệ",
+      upload_tip: "📄 Tải lên học bạ của bạn trên hệ thống trực tuyến.",
+      contact_info: "Liên hệ: ia@saturn.yzu.edu.tw | ☎ +886-3-4638800 ext. 2255",
+      reminder_title: "Lưu ý quan trọng",
+      reminder_text: "🔗 Luôn xác minh ngày, phí và yêu cầu tài liệu trên trang chính thức của Đại học Nguyên Trí."
+    }
+  };
+
+  let currentLang = "en";
+  langToggle.addEventListener('click', () => {
+    const isVietnamese = currentLang === "en";
+    const dict = translations.vi;
+
+    document.querySelectorAll("[data-key]").forEach(el => {
+      const key = el.getAttribute("data-key");
+      if (dict[key]) el.textContent = dict[key];
     });
 
-    mainItems.forEach(cb => cb.addEventListener('change', updateProgress));
-    updateProgress();
+    document.getElementById("mainTitle").textContent = dict.mainTitle;
+    document.getElementById("tagline").textContent = dict.tagline;
 
-    const langToggle = document.getElementById('langToggle');
-    const translations = {
-      vi: {
-        mainTitle: "Hướng Dẫn Nộp Hồ Sơ – Chương Trình IBSC (Đại học Nguyên Trí)",
-        tagline: "Dành cho sinh viên Việt Nam 🇻🇳 | Hướng dẫn từng bước để tham gia chương trình Cử nhân Quốc tế về Truyền thông Chiến lược",
-        phase1_title: "Giai đoạn 1 – Trước khi đăng ký (Chuẩn bị)",
-        research: "Tìm hiểu chương trình của bạn:",
-        check_req: "Kiểm tra yêu cầu đầu vào (điểm số, chứng chỉ tiếng Anh)",
-        decide: "Quyết định: Bạn có đủ điều kiện không? Nếu không, hãy luyện thi hoặc xem các chương trình khác",
-        phase2_title: "Giai đoạn 2 – Nộp hồ sơ (Thực hiện)",
-        create_account: "Tạo tài khoản tại",
-        fill_form: "Điền đầy đủ biểu mẫu trực tuyến",
-        upload_docs: "Tải lên tất cả các tài liệu bắt buộc:",
-        details: "Xem chi tiết",
-        doc1: "Bằng tốt nghiệp THPT",
-        doc2: "Học bạ chính thức",
-        doc3: "Bản sao hộ chiếu",
-        doc4: "Chứng chỉ tiếng Anh (IELTS / TOEFL / CEFR)",
-        doc5: "Bài luận cá nhân",
-        doc6: "Giấy chứng minh tài chính (dành cho sinh viên quốc tế)",
-        pay_fee: "Thanh toán lệ phí đăng ký",
-        submit: "Nộp hồ sơ trước hạn (kiểm tra trên cổng YZU để cập nhật)",
-        phase3_title: "Giai đoạn 3 – Sau khi nộp (Các bước tiếp theo)",
-        check_result: "Kiểm tra kết quả hồ sơ qua email",
-        accepted: "Nếu được nhận → Xác nhận nhập học → Đăng ký lớp → Xin visa (nếu cần)",
-        rejected: "Nếu bị từ chối → Liên hệ phòng tuyển sinh hoặc xem các chương trình khác",
-        contact_title: "Liên hệ",
-        upload_tip: "📄 Tải lên học bạ của bạn trên hệ thống trực tuyến.",
-        contact_info: "Liên hệ: ia@saturn.yzu.edu.tw | ☎ +886-3-4638800 ext. 2255",
-        reminder_title: "Lưu ý quan trọng",
-        reminder_text: "🔗 Luôn xác minh ngày, phí và yêu cầu tài liệu trên trang chính thức của Đại học Nguyên Trí."
-      }
-    };
+    langToggle.textContent = isVietnamese ? "🇬🇧 English" : "🇻🇳 Tiếng Việt";
+    currentLang = isVietnamese ? "vi" : "en";
+    if (!isVietnamese) location.reload();
+  });
+</script>
 
-    let currentLang = "en";
-    langToggle.addEventListener('click', () => {
-      const isVietnamese = currentLang === "en";
-      const dict = translations.vi;
-
-      document.querySelectorAll("[data-key]").forEach(el => {
-        const key = el.getAttribute("data-key");
-        if (dict[key]) el.textContent = dict[key];
-      });
-
-      document.getElementById("mainTitle").textContent = dict.mainTitle;
-      document.getElementById("tagline").textContent = dict.tagline;
-
-      langToggle.textContent = isVietnamese ? "🇬🇧 English" : "🇻🇳 Tiếng Việt";
-      currentLang = isVietnamese ? "vi" : "en";
-      if (!isVietnamese) location.reload();
-    });
-  </script>
 </body>
 </html>
