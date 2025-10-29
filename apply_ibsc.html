@@ -23,7 +23,6 @@
       position: relative;
     }
 
-    /* Nút chuyển ngôn ngữ */
     .lang-toggle {
       position: absolute;
       top: 20px;
@@ -190,14 +189,14 @@
   </header>
 
   <div class="container" id="content">
-    <!-- Nội dung (giữ nguyên) -->
+
     <!-- PHASE 1 -->
     <section class="phase-box phase1">
       <h2 data-key="phase1_title">Phase 1 – Before You Apply (Planning)</h2>
       <ul>
         <li><input type="checkbox" class="main-item" /> <span data-key="research">Research your program:</span> <a href="https://ih.hs.yzu.edu.tw/" target="_blank">IBSC at Yuan Ze University</a></li>
         <li><input type="checkbox" class="main-item" /> <span data-key="check_req">Check entry requirements (grades, English test scores)</span></li>
-        <li><input type="checkbox" class="main-item" /> <span data-key="decide">Decide: Do you meet the requirements? If not, prepare for tests or explore other programs</span></li>
+        <li><input type="checkbox" class="main-item" /> <span data-key="decide">Decide: Do you meet the requirements? If not, prepare for tests or explore other programs</span> <a href="https://www.yzu.edu.tw/index.php/en-us/academics" target="_blank" class="extra-link">Explore</a></li>
       </ul>
     </section>
 
@@ -220,7 +219,7 @@
           </ul>
         </li>
         <li><input type="checkbox" class="main-item" /> <span data-key="pay_fee">Pay the application fee</span> <a href="https://portalfun.yzu.edu.tw/tuiRegistryWeb/login.html" target="_blank" class="extra-link">Check Here</a></li>
-        <li><input type="checkbox" class="main-item" /> <span data-key="submit">Submit before deadline (check Yuan Ze Portal for updates)</span></li>
+        <li><input type="checkbox" class="main-item" /> <span data-key="submit">Submit before deadline (check Yuan Ze Portal for updates)</span> <a href="https://www.yzu.edu.tw/" target="_blank" class="extra-link">YZU Portal</a></li>
       </ul>
     </section>
 
@@ -229,8 +228,12 @@
       <h2 data-key="phase3_title">Phase 3 – After You Apply (Next Steps)</h2>
       <ul>
         <li><input type="checkbox" class="main-item" /> <span data-key="check_result">Check your application result through email</span></li>
-        <li><input type="checkbox" class="main-item" /> <span data-key="accepted">If accepted → Accept offer → Register classes → Apply for visa (if needed)</span></li>
-        <li><input type="checkbox" class="main-item" /> <span data-key="rejected">If rejected → Contact admissions or explore other programs</span></li>
+        <li><input type="checkbox" class="main-item" /> <span data-key="accepted">If accepted → Accept offer → Register classes → Apply for visa (if needed)</span> 
+          <a href="https://www.yzu.edu.tw/admin/aa/files/Registration/freshman/fresh/%E8%B3%87%E6%9C%8D%E8%99%95%E6%9C%8D%E5%8B%99%E4%BB%8B%E7%B4%B9.pdf" target="_blank" class="extra-link">Register Classes Guide</a>
+        </li>
+        <li><input type="checkbox" class="main-item" /> <span data-key="rejected">If rejected → Contact admissions or explore other programs</span> 
+          <a href="https://www.yzu.edu.tw/index.php/en-us/academics" target="_blank" class="extra-link">Explore Programs</a>
+        </li>
       </ul>
     </section>
 
@@ -256,7 +259,6 @@
   </footer>
 
   <script>
-    // === PROGRESS BAR ===
     const mainItems = document.querySelectorAll('.main-item');
     const subItems = document.querySelectorAll('.sub-item');
     const uploadAll = document.getElementById('uploadAll');
@@ -287,7 +289,6 @@
     mainItems.forEach(cb => cb.addEventListener('change', updateProgress));
     updateProgress();
 
-    // === MULTILANGUAGE TOGGLE ===
     const langToggle = document.getElementById('langToggle');
     const translations = {
       vi: {
@@ -337,9 +338,8 @@
 
       langToggle.textContent = isVietnamese ? "🇬🇧 English" : "🇻🇳 Tiếng Việt";
       currentLang = isVietnamese ? "vi" : "en";
-      if (!isVietnamese) location.reload(); // Reload to return English
+      if (!isVietnamese) location.reload();
     });
   </script>
 </body>
 </html>
-
