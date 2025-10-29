@@ -185,8 +185,9 @@
     <ul>
       <li>
         <input type="checkbox" class="main-item"/>
-        <span data-key="research">Research your program: </span>
-        <a href="https://ih.hs.yzu.edu.tw/" target="_blank">IBSC at Yuan Ze University</a>
+        <span data-key="research">Research your program: 
+          <a href="https://ih.hs.yzu.edu.tw/" target="_blank">IBSC at Yuan Ze University</a>
+        </span>
       </li>
 
       <li>
@@ -212,8 +213,8 @@
         <input type="checkbox" class="main-item" />
         <span data-key="create_account">
           Create your account at 
+          <a href="https://yzu-apply.yzu.edu.tw" target="_blank">Yuan Ze Application Portal</a>
         </span>
-        <a href="https://yzu-apply.yzu.edu.tw" target="_blank">Yuan Ze Application Portal</a>
       </li>
 
       <li>
@@ -224,7 +225,7 @@
       <li id="upload-section">
         <input type="checkbox" id="uploadAll" class="main-item" />
         <span data-key="upload_docs">
-          Upload all required documents 
+          Upload all required documents
           (<a href="https://yzu-apply.yzu.edu.tw/en_US/contents/content/5-required-document" target="_blank">see full list here</a>):
         </span>
 
@@ -332,38 +333,37 @@
   mainItems.forEach(cb => cb.addEventListener('change', updateProgress));
   updateProgress();
 
-  // MULTILANGUAGE
+  // ✅ MULTILANG WITH LINKS KEPT
   const langToggle = document.getElementById('langToggle');
   const translations = {
     vi: {
       mainTitle: "Hướng Dẫn Nộp Hồ Sơ – Chương Trình IBSC (Đại học Nguyên Trí)",
       tagline: "Dành cho sinh viên Việt Nam 🇻🇳 | Hướng dẫn từng bước để tham gia chương trình Cử nhân Quốc tế về Truyền thông Chiến lược",
       phase1_title: "Giai đoạn 1 – Trước khi đăng ký (Chuẩn bị)",
-      research: "Tìm hiểu chương trình của bạn:",
+      research: `Tìm hiểu chương trình của bạn: <a href="https://ih.hs.yzu.edu.tw/" target="_blank">IBSC tại Đại học Nguyên Trí</a>`,
       check_req: "Kiểm tra yêu cầu đầu vào (điểm số, chứng chỉ tiếng Anh)",
-      decide: "Quyết định: Bạn có đủ điều kiện không? Nếu không, hãy luyện thi hoặc xem các chương trình khác",
+      decide: `Quyết định: Bạn có đủ điều kiện không? Nếu không, hãy luyện thi hoặc <a href="https://www.yzu.edu.tw/index.php/en-us/academics" target="_blank">xem các chương trình khác</a>`,
       phase2_title: "Giai đoạn 2 – Nộp hồ sơ (Thực hiện)",
-      create_account: "Tạo tài khoản tại",
+      create_account: `Tạo tài khoản tại <a href="https://yzu-apply.yzu.edu.tw" target="_blank">Cổng Nộp Hồ Sơ YZU</a>`,
       fill_form: "Điền đầy đủ biểu mẫu trực tuyến",
-      upload_docs: "Tải lên tất cả các tài liệu bắt buộc:",
-      details: "Xem chi tiết",
+      upload_docs: `Tải lên tất cả tài liệu bắt buộc (<a href="https://yzu-apply.yzu.edu.tw/en_US/contents/content/5-required-document" target="_blank">xem danh sách đầy đủ</a>):`,
       doc1: "Bằng tốt nghiệp THPT",
       doc2: "Học bạ chính thức",
       doc3: "Bản sao hộ chiếu",
-      doc4: "Chứng chỉ tiếng Anh (IELTS / TOEFL / CEFR)",
+      doc4: "Chứng chỉ tiếng Anh (IELTS/TOEFL/CEFR)",
       doc5: "Bài luận cá nhân",
-      doc6: "Giấy chứng minh tài chính (dành cho sinh viên quốc tế)",
-      pay_fee: "Thanh toán lệ phí đăng ký",
-      submit: "Nộp hồ sơ trước hạn (kiểm tra trên cổng YZU để cập nhật)",
+      doc6: "Giấy chứng minh tài chính (cho sinh viên quốc tế)",
+      pay_fee: `Thanh toán lệ phí tại <a href="https://portalfun.yzu.edu.tw/tuiRegistryWeb/login.html" target="_blank">hệ thống thanh toán YZU</a>`,
+      submit: `Nộp hồ sơ trước hạn (kiểm tra cập nhật trên <a href="https://www.yzu.edu.tw/" target="_blank">Cổng thông tin YZU</a>)`,
       phase3_title: "Giai đoạn 3 – Sau khi nộp (Các bước tiếp theo)",
       check_result: "Kiểm tra kết quả hồ sơ qua email",
-      accepted: "Nếu được nhận → Xác nhận nhập học → Đăng ký lớp → Xin visa (nếu cần)",
-      rejected: "Nếu bị từ chối → Liên hệ phòng tuyển sinh hoặc xem các chương trình khác",
+      accepted: `Nếu được nhận → Xác nhận nhập học → <a href="https://www.yzu.edu.tw/admin/aa/files/Registration/freshman/fresh/%E8%B3%87%E6%9C%8D%E8%99%95%E6%9C%8D%E5%8B%99%E4%BB%8B%E7%B4%B9.pdf" target="_blank">Đăng ký lớp</a> → Xin visa (nếu cần)`,
+      rejected: `Nếu bị từ chối → Liên hệ phòng tuyển sinh hoặc <a href="https://www.yzu.edu.tw/index.php/en-us/academics" target="_blank">xem chương trình khác</a>`,
       contact_title: "Liên hệ",
-      upload_tip: "📄 Tải lên học bạ của bạn trên hệ thống trực tuyến.",
+      upload_tip: "📄 Tải học bạ lên hệ thống trực tuyến.",
       contact_info: "Liên hệ: ia@saturn.yzu.edu.tw | ☎ +886-3-4638800 ext. 2255",
       reminder_title: "Lưu ý quan trọng",
-      reminder_text: "🔗 Luôn xác minh ngày, phí và yêu cầu tài liệu trên trang chính thức của Đại học Nguyên Trí."
+      reminder_text: "🔗 Luôn kiểm tra thời gian, chi phí, và yêu cầu hồ sơ trên website chính thức của Đại học Nguyên Trí."
     }
   };
 
@@ -372,17 +372,20 @@
     const isVietnamese = currentLang === "en";
     const dict = translations.vi;
 
-    document.querySelectorAll("[data-key]").forEach(el => {
-      const key = el.getAttribute("data-key");
-      if (dict[key]) el.textContent = dict[key];
-    });
+    if (isVietnamese) {
+      document.getElementById("mainTitle").innerHTML = dict.mainTitle;
+      document.getElementById("tagline").innerHTML = dict.tagline;
 
-    document.getElementById("mainTitle").textContent = dict.mainTitle;
-    document.getElementById("tagline").textContent = dict.tagline;
+      document.querySelectorAll("[data-key]").forEach(el => {
+        const key = el.getAttribute("data-key");
+        if (dict[key]) el.innerHTML = dict[key];
+      });
 
-    langToggle.textContent = isVietnamese ? "🇬🇧 English" : "🇻🇳 Tiếng Việt";
-    currentLang = isVietnamese ? "vi" : "en";
-    if (!isVietnamese) location.reload();
+      langToggle.textContent = "🇬🇧 English";
+      currentLang = "vi";
+    } else {
+      location.reload(); // quay lại bản tiếng Anh nguyên bản
+    }
   });
 </script>
 
